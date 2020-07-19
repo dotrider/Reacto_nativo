@@ -9,7 +9,7 @@ const AddItem = ({addItem}) => {
         <View>
             <TextInput placeholder='Add Item...'
             style={styles.input} onChangeText={eValue => setText(eValue)}/>
-            <TouchableOpacity onPress={() => addItem(text)}>
+            <TouchableOpacity style={styles.btn} onPress={() => addItem(text)}>
                 <Text style={styles.btnText}><Icon name='plus' size={20} /> Add Item</Text>
             </TouchableOpacity>
         </View>
@@ -22,9 +22,13 @@ const AddItem = ({addItem}) => {
             fontSize: 18
         },
         btnText: {
-            color: 'lightgreen',
+            color: 'green',
             fontSize: 20,
             textAlign: 'center'
+        },
+        btn: {
+            padding: 15,
+            backgroundColor: 'lightblue'
         }
       
       })
